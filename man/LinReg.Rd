@@ -2,14 +2,14 @@
 % Please edit documentation in R/LinReg.R
 \name{LinReg}
 \alias{LinReg}
-\title{A simple multiple linear regression function (OLS)}
+\title{LinReg}
 \usage{
 LinReg(dv, iv, data, bootstrap, Number_Bootstrapps, outlier_controll, plot)
 }
 \arguments{
-\item{dv}{dependent vaiable}
+\item{dv}{dependent vaiable name as a string}
 
-\item{iv}{a string vector with the names of the independent variables, separated by commas}
+\item{iv}{a string vector with the names of the independent variables, separated by commas, use c(iv_1,iv_2...iv_n)}
 
 \item{data}{a data frame containing the variables}
 
@@ -23,10 +23,10 @@ LinReg(dv, iv, data, bootstrap, Number_Bootstrapps, outlier_controll, plot)
 the results of linear regression, plots and all requirements plus an conclusion about the violations
 }
 \description{
-This function allows you to perform a linear regression plus requirements
+A simple multiple linear regression function (OLS) and it's requirements
 }
 \examples{
-LinReg('Var_1',c('Var_2','Var_3','Var_4'),test, bootstrap = TRUE, Number_Bootstrapps=1000, outlier_controll = FALSE, plot=TRUE)
+LinReg('dependent_variable',c('independent_variable_1','independent_variable_2','independent_variable_3'),dataframe, bootstrap = TRUE, Number_Bootstrapps=1000, outlier_controll = FALSE, plot=TRUE)
 }
 \keyword{Linear}
 \keyword{Regression}

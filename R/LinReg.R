@@ -1,7 +1,5 @@
-
-#' A simple multiple linear regression function (OLS)
-#'
-#' This function allows you to perform a linear regression plus requirements
+#' @title LinReg
+#' @description A simple multiple linear regression function (OLS) and it's requirements
 #' @param dv dependent vaiable name as a string
 #' @param iv a string vector with the names of the independent variables, separated by commas, use c(iv_1,iv_2...iv_n)
 #' @param data a data frame containing the variables
