@@ -3,30 +3,38 @@
 \name{LinReg}
 \alias{LinReg}
 \title{LinReg}
+\source{
+https://www.hanseatic-statistics.de
+}
 \usage{
-LinReg(dv, iv, data, bootstrap, Number_Bootstrapps, outlier_controll, plot)
+LinReg(dv, iv, data, BS, NBS, OC, plot)
 }
 \arguments{
-\item{dv}{dependent vaiable name as a string}
+\item{dv}{dependent variable name as a string}
 
 \item{iv}{a string vector with the names of the independent variables, separated by commas, use c(iv_1,iv_2...iv_n)}
 
 \item{data}{a data frame containing the variables}
 
-\item{bootstrap}{set bootstap to TRUE or FALSE, if FALSE Number of bootstraps are ignored}
+\item{BS}{Bootstrapping method, set BS to TRUE or FALSE, if FALSE Number of bootstraps are ignored}
 
-\item{outlier_controll}{set outlier_controll to TRUE or FALSE, to use cooks distance to exlude outliers, if bootstrap==TRUE, outlier_controll must be FALSE}
+\item{NBS}{number of random samples used for bootstrapping}
 
-\item{set}{plot to TRUE to create simple scatterplots of correlation between variables}
+\item{OC}{Outlier controll, set OS to TRUE or FALSE, to use cooks distance to exclude outliers, if BS==TRUE, OS must be FALSE}
+
+\item{plot}{set plot to TRUE to create simple scatterplots of correlation between variables}
 }
 \value{
-the results of linear regression, plots and all requirements plus an conclusion about the violations
+the results of linear regression, plots and all requirements plus an interpretation & conclusion about the violations
 }
 \description{
-A simple multiple linear regression function (OLS) and it's requirements
+A simple multiple linear regression function (OLS) and it's requirements. The function automatically interprets the results, creates plots and provides an indication of violations of assumptions. It also calculates the effect sizes of the models. The bootstrapping method can also be used.
 }
 \examples{
-LinReg('dependent_variable',c('independent_variable_1','independent_variable_2','independent_variable_3'),dataframe, bootstrap = TRUE, Number_Bootstrapps=1000, outlier_controll = FALSE, plot=TRUE)
+m<-LinReg('dv',c('iv_1','iv_2','iv_3'),data=data,BS=FALSE,NBS=1000,OC=FALSE,plot=TRUE)
+print(m$Results)
+print(m$Require)
+print(m$Plots)
 }
 \keyword{Linear}
 \keyword{Regression}

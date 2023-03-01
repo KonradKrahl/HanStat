@@ -1,16 +1,25 @@
 Package: HanStat
-Title: Multiple Linear Regression with Assumptions and Bootstrapping
-Version: 0.0.0.9000
-Authors@R: 
-    person(given = "Konrad",
+Type: Package
+Title: Package for Easy Interpretation of Statistical Methods
+Version: 0.90.0
+Date: 2023-02-10
+Authors@R: person(given = "Konrad",
            family = "Krahl",
            role = c("aut", "cre"),
            email = "Beratung@Hanseatic-Statistics.de",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+           comment = c(ORCID = "0000-0002-5528-1722"))
+Maintainer: Konrad Krahl <Beratung@Hanseatic-Statistics.de>
+URL: https://github.com/KonradKrahl/HanStat
+BugReports: https://github.com/KonradKrahl/HanStat
+Description: A simple and time saving multiple linear regression function (OLS) with interpretation, optional bootstrapping, effect size calculation and all tested requirements.
+Depends: R (>= 4.1.0)
+Imports: boot, car, crayon, ggplot2, lmtest, olsrr, ggpubr, devtools
+License: GPL (>=3)
 Encoding: UTF-8
 LazyData: true
-Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
+Language: en-US
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

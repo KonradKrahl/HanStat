@@ -1,2 +1,10 @@
 ^HanStat\.Rproj$
 ^\.Rproj\.user$
+^README\.Rmd$
+^docs
+^cran-comments\.md$
+^\.github$
+^CRAN-SUBMISSION$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
